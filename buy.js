@@ -6,7 +6,7 @@ const secret = process.env.API_SECRET;
 const slack_web_hook = process.env.SLACK_BUY_WEB_HOOK;
 const kraken = new KrakenClient(key, secret);
 
-const EUR_BUY_AMOUNT = process.env.BUY_AMOUNT_IN_EUR;
+const EUR_BUY_AMOUNT = parseFloat(process.env.BUY_AMOUNT_IN_EUR);
 
 main();
 
