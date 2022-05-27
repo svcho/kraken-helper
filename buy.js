@@ -1,17 +1,15 @@
-require('dotenv').config();
 const axios = require('axios');
 const KrakenClient = require('kraken-api');
-const key = process.env.API_KEY;
-const secret = process.env.API_SECRET;
-const slack_web_hook = process.env.SLACK_BUY_WEB_HOOK;
+const key = "INSERT_YOUR_API_KEY";
+const secret = "INSERT_YOUR_API_SECRET";
+const slack_web_hook = "INSERT_YOUR_SLACK_WEBHOOK";
 const kraken = new KrakenClient(key, secret);
-
-const EUR_BUY_AMOUNT = parseFloat(process.env.BUY_AMOUNT_IN_EUR);
 
 main();
 
 async function main() {
 
+    const EUR_BUY_AMOUNT = 5.00; //change to whatever value you want
     let price = parseFloat(await getCurrentBitcoinPrice()).toFixed(2);
     let volume = parseFloat(EUR_BUY_AMOUNT / price).toFixed(8);
     let balances = await kraken.api('Balance');

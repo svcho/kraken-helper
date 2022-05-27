@@ -17,7 +17,6 @@ Both the buy.js file and the withdraw.js file are executed using a cronjob on a 
 NodeJS v12.22.5
 axios v0.27.2
 kraken-api v1.0.1
-dotenv v16.0.1
 ```
 
 ### Installing
@@ -34,17 +33,7 @@ npm install
 
 In order to automate the purchase and withdrawal cronjobs can be used in Linux (or scheduled tasks in Windows but I will only explain cronjobs under Linux in this file).
 
-You will have to create an .env file in the project folder with your api keys and all variables.
-Simply create a file named **.env** in the folder of this project with the following content:
-
-```
-API_KEY="INPUT_YOUR_API_KEY_HERE"
-API_SECRET="INPUT_YOUR_API_SECRET_HERE"
-SLACK_BUY_WEB_HOOK="INPUT_YOUR_SLACK_WEBHOOK_HERE"
-SLACK_WITHDRAWAL_WEB_HOOK="INPUT_YOUR_SLACK_WEBHOOK_HERE"
-WALLET_NAME="INPUT_YOUR_WALLET_NAME_HERE"
-BUY_AMOUNT_IN_EUR=5
-```
+You will need to insert your API keys and your slack webhook url into the buy.js and withdraw.js files.
 
 You can setup or edit your cronjobs on your Linux machine using:
 

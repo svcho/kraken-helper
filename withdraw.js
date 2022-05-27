@@ -1,10 +1,9 @@
-require('dotenv').config();
 const axios = require('axios');
 const KrakenClient = require('kraken-api');
-const key = process.env.API_KEY;
-const secret = process.env.API_SECRET;
-const slack_web_hook = process.env.SLACK_WITHDRAWAL_WEB_HOOK;
-const wallet_name = process.env.WALLET_NAME;
+const key = "INSERT_YOUR_API_KEY";
+const secret = "INSERT_YOUR_API_SECRET";
+const slack_web_hook = "INSERT_YOUR_SLACK_WEBHOOK";
+const wallet_name = "INSERT_YOUR_KRAKEN_WALLET_NAME";
 const kraken = new KrakenClient(key, secret);
 
 main();
