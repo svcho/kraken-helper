@@ -1,18 +1,19 @@
 {
   "name": "kraken-helper",
   "version": "1.0.0",
-  "description": "",
-  "main": "buy.js",
+  "description": "Kraken buy and withdraw automation for Google Cloud Run",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["kraken", "bitcoin", "trade", "automation", "google cloud run"],
   "author": "Jacob Suchorabski",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "kraken-api": "^1.0.1",
-    "node-cron": "^3.0.0"
+    "express": "^4.18.2"
   }
 }
